@@ -10,12 +10,14 @@ namespace CoreCmdPlayground.Commands
         public void Class(string className, string path)
         {
             //new Scaffolding().GenerateClassFile("MyTestObj","./Services");
-            new Scaffolding().GenerateClassFile(className, path);
+            new ScaffoldingService().GenerateClassFile(className, path);
         }
 
         public void Test()
         {
-            new Scaffolding().GetCsprojFileRootNamespace(@"e:\rp\git\CoreCmdPlayground\CoreCmdPlayground\CoreCmdPlayground.csproj");
+            //new CsprojFileService().GetRootNamespace(@"e:\rp\git\CoreCmdPlayground\CoreCmdPlayground\CoreCmdPlayground.csproj");
+            Console.WriteLine("Searching .csproj file...");
+            Console.WriteLine(new CsprojFileService().FindCsprojFile());
         }
     }
 }
