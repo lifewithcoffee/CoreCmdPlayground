@@ -10,9 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="core.cmd">
+    <None Update="_core.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="pushd $(OutDir)&#xD;&#xA;rename _core.cmd core.cmd&#xD;&#xA;popd" />
+  </Target>
 
 </Project>
