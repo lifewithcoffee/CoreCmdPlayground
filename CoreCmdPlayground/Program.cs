@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreCmd;
 
 namespace CoreCmdPlayground
 {
@@ -6,7 +7,7 @@ namespace CoreCmdPlayground
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new CommandExecutor().Execute(args);
         }
     }
 }
