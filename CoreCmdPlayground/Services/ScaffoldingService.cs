@@ -24,5 +24,18 @@ namespace CoreCmdPlayground.Services
                 textWriter.Write(src);
             }
         }
+
+        internal void GenerateSrc()
+        {
+            // for some complex source output, use a separate template file and interpolate string
+            var src = new CsharpSrc();
+            src.Class("public class MyClass")
+                .Method("public void Foo1(string param1, double param2)")   // method body: throw new NotImplementedException();
+                .Method("public int Foo2(int param)")
+                .Method("public string Foo3(float param)")
+            .End()
+            .Class("public class MyClass2").End()
+            .Class("public class MyClass3").End();
+        }
     }
 }
