@@ -10,7 +10,6 @@ namespace CoreCmdPlayground.Commands
         public void Test()
         {
             Console.WriteLine("PipeCommand.Test() is called");
-            new Scaffolding().GenerateClassFile("MyTestObj","./Services");
         }
     }
 }

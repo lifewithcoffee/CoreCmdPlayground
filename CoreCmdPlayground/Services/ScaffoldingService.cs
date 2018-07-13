@@ -5,16 +5,10 @@ using System.Text;
 
 namespace CoreCmdPlayground.Services
 {
-    class Scaffolding
+    class ScaffoldingService
     {
-        string GetProjectDefaultNamespace()
-        {
-            return "no impl";
-        }
-
         internal void GenerateClassFile(string className, string path)
         {
-
             Directory.CreateDirectory(path);    // always create the path recursively if not exist
 
             string filePath = $@"{path}\{className}.cs";
