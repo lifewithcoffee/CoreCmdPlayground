@@ -26,7 +26,6 @@ namespace CoreCmdPlayground.Services
 
     class CsharpSrc
     {
-        ClassDeclaration lastAddedClass;
         string fileNamespace;
         List<string> using_namespaces = new List<string>();
         List<ClassDeclaration> classDecls = new List<ClassDeclaration>();

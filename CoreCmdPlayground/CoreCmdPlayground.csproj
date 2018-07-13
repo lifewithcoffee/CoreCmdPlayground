@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="pushd $(OutDir)&#xD;&#xA;rename _core.cmd core.cmd&#xD;&#xA;popd" />
+    <Exec Command="pushd $(TargetDir)&#xD;&#xA;copy _core.cmd core.cmd&#xD;&#xA;popd" />
   </Target>
 
 </Project>
