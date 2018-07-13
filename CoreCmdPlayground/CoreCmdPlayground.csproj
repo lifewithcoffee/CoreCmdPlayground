@@ -9,4 +9,10 @@
     <PackageReference Include="CoreCmd" Version="0.2.1.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="core.cmd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

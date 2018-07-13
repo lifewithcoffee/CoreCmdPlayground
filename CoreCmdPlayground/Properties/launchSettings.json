@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CoreCmdPlayground": {
+      "commandName": "Project",
+      "commandLineArgs": "pipe test"
+    }
+  }
+}

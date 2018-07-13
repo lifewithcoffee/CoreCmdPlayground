@@ -7,7 +7,14 @@ namespace CoreCmdPlayground
     {
         static void Main(string[] args)
         {
-            new CommandExecutor().Execute(args);
+            try
+            {
+                new CommandExecutor().Execute(args);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
     }
 }
