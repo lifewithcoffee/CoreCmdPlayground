@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nuget.config = nuget.config
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsharpConsoleApp", "FsharpConsoleApp\FsharpConsoleApp.fsproj", "{7025633B-A4CA-4496-857B-AD66281F4D66}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FsharpConsoleApp", "FsharpConsoleApp\FsharpConsoleApp.fsproj", "{7025633B-A4CA-4496-857B-AD66281F4D66}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsharpLib", "FsharpLib\FsharpLib.fsproj", "{261010D5-F9D3-4E14-9660-208A5585B427}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7025633B-A4CA-4496-857B-AD66281F4D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7025633B-A4CA-4496-857B-AD66281F4D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7025633B-A4CA-4496-857B-AD66281F4D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261010D5-F9D3-4E14-9660-208A5585B427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261010D5-F9D3-4E14-9660-208A5585B427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261010D5-F9D3-4E14-9660-208A5585B427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261010D5-F9D3-4E14-9660-208A5585B427}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
