@@ -7,9 +7,7 @@ namespace CoreCmdPlayground.Services
     class ClassDeclaration
     {
         public CsharpSrc CsharpSrc { get; set; }
-
         public string ClassDecl { get; set; }
-
         private List<string> methodDecls = new List<string>();
 
         public ClassDeclaration Method(string method_declaration)
