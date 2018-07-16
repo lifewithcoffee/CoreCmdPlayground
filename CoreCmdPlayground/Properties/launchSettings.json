@@ -2,7 +2,7 @@
   "profiles": {
     "CoreCmdPlayground": {
       "commandName": "Project",
-      "commandLineArgs": "add test"
+      "commandLineArgs": "pipe test"
     }
   }
 }

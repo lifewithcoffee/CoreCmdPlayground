@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FsharpConsoleApp": {
+      "commandName": "Project",
+      "commandLineArgs": "speak hey Joe"
+    }
+  }
+}
