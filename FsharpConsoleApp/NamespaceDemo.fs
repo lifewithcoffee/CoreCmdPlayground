@@ -5,6 +5,6 @@ module SayCommand =
         printfn "Hello %s" name
 
 type SpeakCommand() = class
-    member this.Hey name = 
+    member __.Hey name = 
         printfn "Speak: Hey %s" name
 end
