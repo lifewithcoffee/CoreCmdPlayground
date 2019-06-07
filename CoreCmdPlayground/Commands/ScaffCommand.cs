@@ -1,13 +1,15 @@
-﻿using CoreCmdPlayground.Services;
+﻿using CoreCmd.Help;
+using CoreCmdPlayground.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CoreCmdPlayground.Commands
 {
-    class AddCommand
+    [Help("Project scaffolding")]
+    class ScafCommand
     {
-        public void Class(string className, string path)
+        public void AddClass(string className, string path)
         {
             //new Scaffolding().GenerateClassFile("MyTestObj","./Services");
             new ScaffoldingService().GenerateClassFile(className, path);
@@ -20,4 +22,7 @@ namespace CoreCmdPlayground.Commands
             Console.WriteLine(new CsprojFileService().FindCsprojFile());
         }
     }
+
+    [Help("Short command of Scaf")]
+    class ScCommand : ScafCommand { }
 }
