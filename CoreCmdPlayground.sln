@@ -9,13 +9,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		nuget.config = nuget.config
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FsharpConsoleApp", "FsharpConsoleApp\FsharpConsoleApp.fsproj", "{7025633B-A4CA-4496-857B-AD66281F4D66}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FsharpLib", "FsharpLib\FsharpLib.fsproj", "{261010D5-F9D3-4E14-9660-208A5585B427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCmdPlaygroundLib", "CoreCmdPlaygroundLib\CoreCmdPlaygroundLib.csproj", "{1F5788BB-09E1-4CCB-AACC-2DDA0323E50B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCmdPlaygroundLib", "CoreCmdPlaygroundLib\CoreCmdPlaygroundLib.csproj", "{1F5788BB-09E1-4CCB-AACC-2DDA0323E50B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

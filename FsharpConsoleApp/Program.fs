@@ -3,6 +3,7 @@
 open CoreCmd
 open ModuleDemo
 open NamespaceDemo
+open ClassDemo
 
 type NoiseCommand() =
     // from: http://developer.51cto.com/art/200908/143854.htm
@@ -25,7 +26,7 @@ type NoiseCommand() =
         let shout = new ShoutCommand()
         shout.Hey "model_demo"
         (new ShoutCommand()).Hey "hello"
-        foo
+        MultipleCall_Execute_MultipleTimes_A
 
     member __.NamespaceDemo = 
         let speak = new SpeakCommand()
@@ -34,8 +35,33 @@ type NoiseCommand() =
 let apply_corecmd argv = 
     let executor = new CommandExecutor()
     executor.Execute(argv)
+
+let DoPrint = printfn "Global DoPrint called" 
+let DoPrintWithParam param = printfn "Global DoPrintWithParam called %s" param
+
+let ModuleGlobalFnDemo() =
+    //MultipleCall_Execute_OnlyOnce
+    //MultipleCall_Execute_OnlyOnce // will not be executed
+
+    //MultipleCall_Execute_MultipleTimes_C ()
+    //MultipleCall_Execute_MultipleTimes_C () // will be executed
+    //MultipleCall_Execute_MultipleTimes_C() // will be executed
+    //MultipleCall_Execute_MultipleTimes_C() // will be executed
+
+    //MultipleCall_WillExecute_MultipleTimes "line1"
+    //MultipleCall_WillExecute_MultipleTimes "line1"
+
+    let cmd = new ShoutCommand()
+    cmd.Hey "Jon"
+    cmd.Hello
+    cmd.Hello // will be executed
     
+
 [<EntryPoint>]
 let main argv =
-    apply_corecmd argv
-    0 // return an integer exit code
+    //apply_corecmd argv
+
+    RunClassDemo()
+    //ModuleGlobalFnDemo()
+
+    0

@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Crypto\AesFileEncryption.fs" />
+    <Compile Include="Crypto\RsaDemo.fs" />
     <Compile Include="NamespaceDemo.fs" />
     <Compile Include="ModuleDemo.fs" />
+    <Compile Include="ClassDemo.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
