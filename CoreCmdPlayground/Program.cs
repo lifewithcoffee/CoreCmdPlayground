@@ -1,5 +1,4 @@
 ﻿using System;
-using CoreCmd;
 using CoreCmd.CommandExecution;
 
 namespace CoreCmdPlayground

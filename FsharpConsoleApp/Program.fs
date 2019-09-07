@@ -1,6 +1,6 @@
 ﻿// Learn more about F# at http://fsharp.org
 
-open CoreCmd
+open CoreCmd.CommandExecution
 open ModuleDemo
 open NamespaceDemo
 open ClassDemo
@@ -33,7 +33,7 @@ type NoiseCommand() =
         speak.Hey "namespace_demo"
 
 let apply_corecmd argv = 
-    let executor = new CommandExecutor()
+    let executor = new AssemblyCommandExecutor()
     executor.Execute(argv)
 
 let DoPrint = printfn "Global DoPrint called" 

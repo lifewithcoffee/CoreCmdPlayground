@@ -25,5 +25,5 @@ let decrypt (key : string) inFile outFile =
     printfn "%A" fsIn.Length
     let cs = new CryptoStream(fsIn, decryptor, CryptoStreamMode.Read)
     let (buf : byte[]) = Array.zeroCreate (int fsIn.Length)
-    cs.Read(buf, 0, buf.Length)
+    cs.Read(buf, 0, buf.Length) |> ignore
     File.WriteAllBytes(outFile, buf)
