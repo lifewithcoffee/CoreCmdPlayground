@@ -1,4 +1,5 @@
-﻿using CoreCmd.Help;
+﻿using CoreCmd.Attributes;
+using CoreCmd.Help;
 using CoreCmdPlayground.Services;
 using System;
 using System.Collections.Generic;

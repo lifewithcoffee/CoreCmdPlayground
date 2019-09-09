@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="corecmd" Version="1.0.0" />
+    <PackageReference Include="corecmd" Version="1.2.0" />
     <PackageReference Include="FSharp.Core" Version="4.5.0" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
