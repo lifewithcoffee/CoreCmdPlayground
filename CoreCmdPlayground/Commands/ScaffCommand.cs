@@ -1,6 +1,6 @@
 ﻿using CoreCmd.Attributes;
 using CoreCmd.Help;
-using CoreCmdPlayground.Services;
+using HandlebarsDotNet;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,20 +10,28 @@ namespace CoreCmdPlayground.Commands
     [Help("Project scaffolding")]
     class ScafCommand
     {
-        public void AddClass(string className, string path)
-        {
-            //new Scaffolding().GenerateClassFile("MyTestObj","./Services");
-            new ScaffoldingService().GenerateClassFile(className, path);
-        }
 
-        public void Test()
+        // try out Handlebars.Net
+        public void TestHandlebars()
         {
-            //new CsprojFileService().GetRootNamespace(@"e:\rp\git\CoreCmdPlayground\CoreCmdPlayground\CoreCmdPlayground.csproj");
-            Console.WriteLine("Searching .csproj file...");
-            Console.WriteLine(new CsprojFileService().FindCsprojFile());
+            string source =
+@"<div class=""entry"">
+  <h1>{{title}}</h1>
+  <div class=""body"">
+    {{body}}
+  </div>
+</div>";
+            var template = Handlebars.Compile(source);
+
+            var data = new
+            {
+                title = "My new post",
+                body = "This is my first post!"
+            };
+
+            var result = template(data);
+
+            Console.WriteLine(result);
         }
     }
-
-    [Help("Short command of Scaf")]
-    class ScCommand : ScafCommand { }
 }

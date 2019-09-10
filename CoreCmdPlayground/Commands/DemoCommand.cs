@@ -1,4 +1,3 @@
-using CoreCmdPlayground.Services;
 using CoreCmdPlaygroundLib;
 using NamespaceDemo;
 using System;
@@ -11,7 +10,7 @@ using static ModuleDemo;
 
 namespace CoreCmdPlayground.Commands
 {
-    class PipeCommand
+    class DemoCommand
     {
         public void CallFsDll()
         {
