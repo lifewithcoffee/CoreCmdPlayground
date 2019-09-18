@@ -18,10 +18,4 @@
     <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="cpgd.cmd">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
