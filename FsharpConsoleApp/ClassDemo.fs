@@ -13,5 +13,7 @@ type CustomerName(firstName, lastName, birthYear) =
         printfn "Full name: %s %s; Age: %d" this.FirstName this.LastName this.age
 
 let RunClassDemo () = 
+    Print.Separator_______________________________________()
     let customerName = new CustomerName("John", "Boni", 1981)
+    customerName.displayInfo
     customerName.displayInfo

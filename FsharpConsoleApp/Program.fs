@@ -59,9 +59,9 @@ let ModuleGlobalFnDemo() =
 
 [<EntryPoint>]
 let main argv =
-    //apply_corecmd argv
+    apply_corecmd argv
 
-    RunClassDemo()
+    //RunClassDemo()
     //ModuleGlobalFnDemo()
 
     0
