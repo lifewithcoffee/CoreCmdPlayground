@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="do.cmd" />
     <Compile Include="Crypto\AesFileEncryption.fs" />
     <Compile Include="Crypto\RsaDemo.fs" />
     <Compile Include="NamespaceDemo.fs" />
@@ -17,6 +18,8 @@
   <ItemGroup>
     <Content Include="Properties\launchSettings.json" />
   </ItemGroup>
+
+  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="corecmd" Version="1.2.0" />
