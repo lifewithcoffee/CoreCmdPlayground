@@ -1,6 +1,6 @@
 ﻿module ClassDemo
 
-open ModuleDemo
+open FsModuleDemo
 open System
 
 type CustomerName(firstName, lastName, birthYear) = 

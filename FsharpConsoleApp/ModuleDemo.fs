@@ -1,6 +1,6 @@
-﻿module ModuleDemo
+﻿module FsModuleDemo
 
-type ShoutCommand() = class
+type FsShoutCommand() = class
     member __.Hey name = 
         printfn "Shout: Hey %s" name
 
@@ -8,12 +8,12 @@ type ShoutCommand() = class
         printfn "Shout: Hello without param"
 end
 
-type YellCommand() =
+type FsYellCommand() =
     member __.Hey name = 
         printfn "Yell: Hi %s" name
         printfn "Yell: another yell"
 
-        let shout = new ShoutCommand()
+        let shout = new FsShoutCommand()
         shout.Hey "Jerry"
 
 let MultipleCall_Execute_MultipleTimes_A x =

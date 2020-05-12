@@ -1,10 +1,15 @@
-﻿namespace NamespaceDemo
+﻿namespace FsNamespaceDemo
 
-module SayCommand =
+open UtilityLib
+
+module FsSayCommand =
+
     let hey name =
+        Print.Separator_______________________________________()
         printfn "Hello %s" name
 
-type SpeakCommand() = class
+type FsSpeakCommand() = class
     member __.Hey name = 
-        printfn "Speak: Hey %s" name
+        Print.Separator_______________________________________()
+        printfn "Speak: Hey %s, count = 1" name
 end

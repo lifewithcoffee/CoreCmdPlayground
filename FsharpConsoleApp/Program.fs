@@ -1,8 +1,8 @@
 ﻿// Learn more about F# at http://fsharp.org
 
 open CoreCmd.CommandExecution
-open ModuleDemo
-open NamespaceDemo
+open FsModuleDemo
+open FsNamespaceDemo
 open ClassDemo
 
 type NoiseCommand() =
@@ -23,13 +23,13 @@ type NoiseCommand() =
         printfn "%A" result
 
     member __.ModelDemo = 
-        let shout = new ShoutCommand()
+        let shout = new FsShoutCommand()
         shout.Hey "model_demo"
-        (new ShoutCommand()).Hey "hello"
+        (new FsShoutCommand()).Hey "hello"
         MultipleCall_Execute_MultipleTimes_A
 
     member __.NamespaceDemo = 
-        let speak = new SpeakCommand()
+        let speak = new FsSpeakCommand()
         speak.Hey "namespace_demo"
 
 let apply_corecmd argv = 
@@ -51,7 +51,7 @@ let ModuleGlobalFnDemo() =
     //MultipleCall_WillExecute_MultipleTimes "line1"
     //MultipleCall_WillExecute_MultipleTimes "line1"
 
-    let cmd = new ShoutCommand()
+    let cmd = new FsShoutCommand()
     cmd.Hey "Jon"
     cmd.Hello
     cmd.Hello // will be executed

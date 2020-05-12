@@ -1,10 +1,13 @@
 using CoreCmdPlaygroundLib;
-using NamespaceDemo;
+using FsNamespaceDemo;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
 using System.Text;
+using UtilityLib;
 using static CoreCmdPlaygroundLib.StaticClass1;
-using static ModuleDemo;
+using static FsModuleDemo;
 
 //using static Microsoft.FSharp.Core.ModuleDemo;
 
@@ -14,15 +17,17 @@ namespace CoreCmdPlayground.Commands
     {
         public void CallFsDll()
         {
-            Console.WriteLine("PipeCommand.Test() is called");
-            //new YellCommand().Hey("Bob");
-            //SayCommand.hey("Ben");
-            new SpeakCommand().Hey("Bok (from pip command)");
+            Print.Separator_______________________________________();
+
+            Console.WriteLine("CallFsDll() is called, count = 5");
+            new FsYellCommand().Hey("Bob");
+            FsSayCommand.hey("Ben");
+            new FsSpeakCommand().Hey("Bok (from pip command)");
         }
 
         public void CallCsDll()
         {
-            Console.WriteLine("PipeCommand.Test2() is called");
+            Console.WriteLine("CallCsDll() is called, cout = 1");
             new Class1().Foo();
             StaticClass1.StaticFoo();
             StaticClass1.InnerStaticClass1.InnerStaticFoo();
