@@ -18,8 +18,8 @@ namespace CoreCmdPlayground.Commands
         public void CallFsDll()
         {
             Print.Separator_______________________________________();
-
             Console.WriteLine("CallFsDll() is called, count = 5");
+
             new FsYellCommand().Hey("Bob");
             FsSayCommand.hey("Ben");
             new FsSpeakCommand().Hey("Bok (from pip command)");
@@ -27,6 +27,8 @@ namespace CoreCmdPlayground.Commands
 
         public void CallCsDll()
         {
+            Print.Separator_______________________________________();
+
             Console.WriteLine("CallCsDll() is called, cout = 1");
             new Class1().Foo();
             StaticClass1.StaticFoo();
