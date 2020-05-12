@@ -1,5 +1,4 @@
 using CoreCmdPlaygroundLib;
-using FsNamespaceDemo;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +6,6 @@ using System.Reflection;
 using System.Text;
 using UtilityLib;
 using static CoreCmdPlaygroundLib.StaticClass1;
-using static FsModuleDemo;
 
 //using static Microsoft.FSharp.Core.ModuleDemo;
 
@@ -20,9 +18,9 @@ namespace CoreCmdPlayground.Commands
             Print.Separator_______________________________________();
             Console.WriteLine("CallFsDll() is called, count = 5");
 
-            new FsYellCommand().Hey("Bob");
-            FsSayCommand.hey("Ben");
-            new FsSpeakCommand().Hey("Bok (from pip command)");
+            new FsModuleDemo.FsYellCommand().Hey("Bob");
+            FsNamespaceDemo.FsSayCommand.hey("Ben");
+            new FsNamespaceDemo.FsSpeakCommand().Hey("Bok (from pip command)");
         }
 
         public void CallCsDll()
