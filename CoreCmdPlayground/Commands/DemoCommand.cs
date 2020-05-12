@@ -12,7 +12,7 @@ namespace CoreCmdPlayground.Commands
 {
     class DemoCommand
     {
-        public void CallFsdll()
+        public void CallFsDll()
         {
             Console.WriteLine("PipeCommand.Test() is called");
             //new YellCommand().Hey("Bob");
@@ -20,7 +20,7 @@ namespace CoreCmdPlayground.Commands
             new SpeakCommand().Hey("Bok (from pip command)");
         }
 
-        public void CallCsdll()
+        public void CallCsDll()
         {
             Console.WriteLine("PipeCommand.Test2() is called");
             new Class1().Foo();
