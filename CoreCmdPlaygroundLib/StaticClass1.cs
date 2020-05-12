@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using UtilityLib;
 
 namespace CoreCmdPlaygroundLib
 {
@@ -8,6 +9,7 @@ namespace CoreCmdPlaygroundLib
     {
         public static void StaticFoo()
         {
+            Print.Separator_______________________________________();
             Console.WriteLine("StaticClass1.StaticFoo() called");
         }
         
@@ -15,6 +17,7 @@ namespace CoreCmdPlaygroundLib
         {
             public static void InnerStaticFoo()
             {
+                Print.Separator_______________________________________();
                 Console.WriteLine("InnerStaticClass1.InnerStaticFoo() called");
             }
         }
@@ -23,6 +26,7 @@ namespace CoreCmdPlaygroundLib
         {
             public void InnerFoo()
             {
+                Print.Separator_______________________________________();
                 Console.WriteLine("InnerClass1.InnerFoo() called");
             }
         }

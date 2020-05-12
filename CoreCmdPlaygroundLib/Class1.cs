@@ -1,4 +1,5 @@
 ﻿using System;
+using UtilityLib;
 
 namespace CoreCmdPlaygroundLib
 {
@@ -6,7 +7,8 @@ namespace CoreCmdPlaygroundLib
     {
         public void Foo()
         {
-            Console.WriteLine("Class1.Foo() called");
+            Print.Separator_______________________________________();
+            Console.WriteLine("Class1.Foo() from CoreCmdPlaygroundLib.dll is called, count = 1");
         }
     }
 }
