@@ -16,6 +16,7 @@
     <ProjectReference Include="..\CoreCmdPlaygroundLib\CoreCmdPlaygroundLib.csproj" />
     <ProjectReference Include="..\FsharpConsoleApp\FsharpConsoleApp.fsproj" />
     <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
+    <ProjectReference Include="..\LiteDBTestLib\LiteDBTestLib.csproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 
