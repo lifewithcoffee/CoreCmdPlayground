@@ -2,7 +2,7 @@ namespace FsharpLib
 
 open UtilityLib
 
-module Say =
+module SayFromLib =
     let hello name =
         Print.Separator_______________________________________()
-        printfn "Hello %s" name
+        printfn "Hello %s from SayFromLib" name

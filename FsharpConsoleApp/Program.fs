@@ -1,9 +1,8 @@
 ﻿// Learn more about F# at http://fsharp.org
 
 open CoreCmd.CommandExecution
-open FsModuleDemo
-open FsNamespaceDemo
-open ClassDemo
+open FsModuleDemo       // [notes] use 'open' to import a module
+open FsNamespaceDemo    // [notes] use 'open' to import a namespace
 
 type NoiseCommand() =
     // from: http://developer.51cto.com/art/200908/143854.htm
@@ -22,46 +21,8 @@ type NoiseCommand() =
         let result = loop [] [2 .. n]  
         printfn "%A" result
 
-    member __.ModelDemo = 
-        let shout = new FsShoutCommand()
-        shout.Hey "model_demo"
-        (new FsShoutCommand()).Hey "hello"
-        MultipleCall_Execute_MultipleTimes_A
-
-    member __.NamespaceDemo = 
-        let speak = new FsSpeakCommand()
-        speak.Hey "namespace_demo"
-
-let apply_corecmd argv = 
-    let executor = new AssemblyCommandExecutor()
-    executor.Execute(argv)
-
-let DoPrint = printfn "Global DoPrint called" 
-let DoPrintWithParam param = printfn "Global DoPrintWithParam called %s" param
-
-let ModuleGlobalFnDemo() =
-    //MultipleCall_Execute_OnlyOnce
-    //MultipleCall_Execute_OnlyOnce // will not be executed
-
-    //MultipleCall_Execute_MultipleTimes_C ()
-    //MultipleCall_Execute_MultipleTimes_C () // will be executed
-    //MultipleCall_Execute_MultipleTimes_C() // will be executed
-    //MultipleCall_Execute_MultipleTimes_C() // will be executed
-
-    //MultipleCall_WillExecute_MultipleTimes "line1"
-    //MultipleCall_WillExecute_MultipleTimes "line1"
-
-    let cmd = new FsShoutCommand()
-    cmd.Hey "Jon"
-    cmd.Hello
-    cmd.Hello // will be executed
-    
-
 [<EntryPoint>]
 let main argv =
-    apply_corecmd argv
-
-    //RunClassDemo()
-    //ModuleGlobalFnDemo()
-
+    let executor = new AssemblyCommandExecutor()
+    executor.Execute(argv)
     0

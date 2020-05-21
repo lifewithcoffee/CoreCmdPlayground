@@ -2,8 +2,8 @@
 
 open UtilityLib
 
+// [notes] module is actually a static class, which cannot be reflected by CoreCmd
 module FsSayCommand =
-
     let hey name =
         Print.Separator_______________________________________()
         printfn "Hello %s" name

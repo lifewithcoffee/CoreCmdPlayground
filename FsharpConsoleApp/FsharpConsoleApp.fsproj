@@ -12,14 +12,13 @@
     <Compile Include="NamespaceDemo.fs" />
     <Compile Include="ModuleDemo.fs" />
     <Compile Include="ClassDemo.fs" />
+    <Compile Include="FunctionDemo.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Properties\launchSettings.json" />
   </ItemGroup>
-
-  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="corecmd" Version="1.2.0" />
@@ -28,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 
