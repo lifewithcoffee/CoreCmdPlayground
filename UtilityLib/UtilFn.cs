@@ -11,7 +11,8 @@ namespace UtilityLib
             var sf = st.GetFrame(1);        // get caller method's frame info
 
             var currentMethodName = sf.GetMethod();
-            Console.WriteLine($"----------------------------------------------{currentMethodName.Name}");
+            
+            Console.WriteLine($"----------------------------------------------{currentMethodName.ReflectedType.Name}.{currentMethodName.Name}");
         }
 
     }
