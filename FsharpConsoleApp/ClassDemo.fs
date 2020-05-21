@@ -6,13 +6,13 @@ open UtilityLib
 
 type CustomerName(firstName, lastName, birthYear) = 
 
-    // [notes] this can be replace by double or underscore
+    // [notes] 'this' can be replace by any string, see 'jackie_chan.Info' below
     member this.FirstName = firstName
     member __.LastName = lastName  
     member _.age = DateTime.Now.Year - birthYear
-    member this.Info = 
+    member jackie_chan.Info = 
         Print.Separator_______________________________________()
-        printfn "Full name: %s %s; Age: %d" this.FirstName this.LastName this.age
+        printfn "Full name: %s %s; Age: %d" jackie_chan.FirstName jackie_chan.LastName jackie_chan.age
 
 // [notes] if need to run as corecmd command by: do class demo
 //         the method Demo() must have brackets "()" declared
