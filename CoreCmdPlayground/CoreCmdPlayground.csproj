@@ -17,6 +17,7 @@
     <ProjectReference Include="..\FsharpConsoleApp\FsharpConsoleApp.fsproj" />
     <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
     <ProjectReference Include="..\LiteDBTestLib\LiteDBTestLib.csproj" />
+    <ProjectReference Include="..\MongoDBLib\MongoDBLib.csproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 
