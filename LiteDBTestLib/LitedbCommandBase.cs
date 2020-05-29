@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace LiteDBTestLib
 {
-    public class LiteDBOperator
+    public class LitedbCommandBase
     {
         public void Test1()
         {
