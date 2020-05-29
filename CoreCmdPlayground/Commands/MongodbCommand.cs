@@ -6,5 +6,5 @@ using MongoDBLib;
 
 namespace CoreCmdPlayground.Commands
 {
-    public class MongodbCommand : MongoDBDemo { }
+    public class MongodbCommand : MongodbCommandBase { }
 }

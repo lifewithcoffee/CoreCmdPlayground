@@ -3,7 +3,7 @@ using MongoDB.Driver;
 
 namespace MongoDBLib
 {
-    public class MongoDBDemo
+    public class MongodbCommandBase
     {
         public void ListDB()
         {
