@@ -8,7 +8,7 @@
   <ItemGroup>
     <PackageReference Include="akka" Version="1.3.14" />
     <PackageReference Include="Akka.Remote" Version="1.3.14" />
-    <PackageReference Include="CoreCmd" Version="1.2.0" />
+    <PackageReference Include="CoreCmd" Version="1.3.0.1" />
     <PackageReference Include="handlebars.net" Version="1.10.1" />
   </ItemGroup>
 
@@ -17,6 +17,7 @@
     <ProjectReference Include="..\FsharpConsoleApp\FsharpConsoleApp.fsproj" />
     <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
     <ProjectReference Include="..\HttpClientLib\HttpClientLib.csproj" />
+    <ProjectReference Include="..\InfluxDBTestLib\InfluxDBTestLib.csproj" />
     <ProjectReference Include="..\LiteDBTestLib\LiteDBTestLib.csproj" />
     <ProjectReference Include="..\MongoDBLib\MongoDBLib.csproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />

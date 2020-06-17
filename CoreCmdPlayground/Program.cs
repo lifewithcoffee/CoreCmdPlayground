@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Threading.Tasks;
 using CoreCmd.CommandExecution;
 
 namespace CoreCmdPlayground
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            new AssemblyCommandExecutor().Execute(args);
+            await new AssemblyCommandExecutor().ExecuteAsync(args);
         }
     }
 }
