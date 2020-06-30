@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 
 namespace HttpClientLib
 {
-    public class HttpService
+    public interface IHttpDownloadService
+    {
+        Task DownloadImage(string url);
+    }
+
+    public class HttpDownloadService : IHttpDownloadService
     {
         private readonly HttpClient _httpClient;
 
-        public HttpService()
+        public HttpDownloadService(IHttpClientFactory httpClientFactory)
         {
-            var serviceProvider = new ServiceCollection().AddHttpClient().BuildServiceProvider();
-            var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
+            //var serviceProvider = new ServiceCollection().AddHttpClient().BuildServiceProvider();
+            //var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
 
             _httpClient = httpClientFactory.CreateClient();
+            Console.WriteLine("_httpClient initialized");
         }
 
         public async Task DownloadImage(string url)

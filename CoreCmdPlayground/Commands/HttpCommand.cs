@@ -2,15 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CoreCmdPlayground.Commands
 {
     public class HttpCommand
     {
-        public void DownloadPicture(string url)
+        IHttpDownloadService _httpDownloadService;
+
+        public HttpCommand(IHttpDownloadService httpDownloadService)
+        {
+            _httpDownloadService = httpDownloadService;
+        }
+
+        public async Task DownloadPicture(string url)
         {
             Console.WriteLine("DownloadPicture() called");
-            new HttpService().DownloadImage(url).Wait();
+            await _httpDownloadService.DownloadImage(url);
         }
     }
 }
