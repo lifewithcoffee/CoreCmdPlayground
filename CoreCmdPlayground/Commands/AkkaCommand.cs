@@ -97,7 +97,7 @@ namespace CoreCmdPlayground.Commands
             // initialize an actor system, i.e. a runtime or container of actors
             var system = ActorSystem.Create("MySystem");
 
-            // create and actor and get its reference
+            // create an actor and get its reference
             var greeter = system.ActorOf<GreetingActor>("greeter");
 
             for(int i = 0; i < 1000; i++)
