@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -6,13 +7,18 @@ namespace MongoDBLib
 {
     public class MongodbCommandBase
     {
-        const string localDbName = "local";
+        const string localDbName = "rltestdb";
         MongoClient _dbClient = new MongoClient("mongodb://localhost:27017");
 
         public void ListDB()
         {
             Console.WriteLine("The list of databases on this server is: ");
             _dbClient.ListDatabases().ToList().ForEach(db => Console.WriteLine(db));
+        }
+
+        public async Task DropDB()
+        {
+            await _dbClient.DropDatabaseAsync(localDbName);
         }
 
         public void DropCollection(string collectionName)
