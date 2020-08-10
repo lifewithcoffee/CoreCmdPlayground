@@ -1,24 +1,28 @@
 ﻿using HttpClientLib;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CoreCmdPlayground.Commands
 {
-    public class HttpCommand
+    public class HttpCommand : HttpDownloadService
     {
-        IHttpDownloadService _httpDownloadService;
+        public HttpCommand(IHttpClientFactory httpClientFactory):base(httpClientFactory)
+        { }
 
-        public HttpCommand(IHttpDownloadService httpDownloadService)
-        {
-            _httpDownloadService = httpDownloadService;
-        }
+        //IHttpDownloadService _httpDownloadService;
 
-        public async Task DownloadPicture(string url)
-        {
-            Console.WriteLine("DownloadPicture() called");
-            await _httpDownloadService.DownloadImage(url);
-        }
+        //public HttpCommand(IHttpDownloadService httpDownloadService)
+        //{
+        //    _httpDownloadService = httpDownloadService;
+        //}
+
+        //public async Task DownloadPicture(string url)
+        //{
+        //    Console.WriteLine("DownloadPicture() called");
+        //    await _httpDownloadService.DownloadImage(url);
+        //}
     }
 }

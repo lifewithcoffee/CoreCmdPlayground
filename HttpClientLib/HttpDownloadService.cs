@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace HttpClientLib
@@ -34,6 +35,20 @@ namespace HttpClientLib
 
             string filename = Path.GetFileName(new Uri(url).LocalPath);
             File.WriteAllBytes(@$"C:\_temp\{filename}", imageBytes);
+        }
+
+        public async Task Get()
+        {
+            _httpClient.DefaultRequestHeaders.Accept.Clear();
+            _httpClient.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            _httpClient.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
+
+            //var stringTask = _httpClient.GetStringAsync("https://api.github.com/orgs/dotnet/repos");
+            var stringTask = _httpClient.GetStringAsync("http://localhost:5000/healthz");
+
+            var msg = await stringTask;
+            Console.Write(msg);
         }
     }
 
