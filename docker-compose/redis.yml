@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  redis:
+    image: redis:5-alpine
+    container_name: 'rl_redis'
+    volumes:
+      - redisdata:/data
+    networks:
+      - corecmd_playground_network
+
+networks:
+  corecmd_playground_network:
+
+volumes:
+  redisdata:

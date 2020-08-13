@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  postgresql:
+    image: postgres:9.6-alpine
+    container_name: 'rl_postgresql'
+    environment:
+      - POSTGRES_PASSWORD=root
+    volumes:
+      - ./configuration/postgresql/initdb:/docker-entrypoint-initdb.d
+      - postgresqldata:/var/lib/postgresql/data
+    networks:
+      - corecmd_playground_network
+
+networks:
+  corecmd_playground_network:
+
+volumes:
+  postgresqldata:
