@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: 'rl_mongodb'
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb-data:/data/db
+      - mongodb-config:/data/configdb
+    networks:
+      - corecmd_playground_network
+
+networks:
+  corecmd_playground_network:
+
+volumes:
+  mongodb-data:
+  mongodb-config:
+
