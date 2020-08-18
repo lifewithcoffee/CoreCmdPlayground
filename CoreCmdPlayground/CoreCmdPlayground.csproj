@@ -20,7 +20,6 @@
     <ProjectReference Include="..\HttpClientLib\HttpClientLib.csproj" />
     <ProjectReference Include="..\InfluxDBTestLib\InfluxDBTestLib.csproj" />
     <ProjectReference Include="..\LiteDBTestLib\LiteDBTestLib.csproj" />
-    <ProjectReference Include="..\MongoDBLib\MongoDBLib.csproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 
