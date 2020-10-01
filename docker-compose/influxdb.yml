@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+  influxdb:
+    image: quay.io/influxdb/influxdb:2.0.0-beta
+    ports:
+      - 9999:9999
+    networks:
+      - corecmd_playground_network
+
+networks:
+  corecmd_playground_network:
+
+volumes:
+  postgresqldata:
+  redisdata:
+  mongodb-data:
+  mongodb-config:

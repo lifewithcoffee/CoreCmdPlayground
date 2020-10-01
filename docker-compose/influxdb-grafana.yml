@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 services:
   influxdb:
@@ -11,7 +11,8 @@ services:
   grafana:
     image: grafana/grafana:latest
     ports:
-      - 3000:3000
+      # change the outer port to 13000 as hyper-v keep 3000 as reserved port
+      - 13000:3000
     networks:
       - corecmd_playground_network
 
@@ -23,4 +24,3 @@ volumes:
   redisdata:
   mongodb-data:
   mongodb-config:
-
