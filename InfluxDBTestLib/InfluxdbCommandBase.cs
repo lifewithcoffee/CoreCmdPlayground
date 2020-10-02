@@ -9,9 +9,10 @@ namespace InfluxDBTestLib
 {
     public class InfluxdbCommandBase
     {
-        private static readonly char[] Token = "4lBCCgkkF9Eh2o7F-6wSE68J5SSl9D3DUlTFlzCz4nAr6DkwfpNtw5osl3iu_z3EmviwTF0rYWFcOHtBHbO-bA==".ToCharArray();
+        // find tokens from InfluxDB UI | Data | Tokens
+        private static readonly char[] Token = "4R1aL7t1hZolnMQezXQxkhhMGlqYUBy7g5Ue8RQAQ9wHn_XIHJN_2EpFqaYcD9F2wv_lt-kHqP8Ym99c7Gv5pw==".ToCharArray();
 
-        public async Task Test1()
+        public void WriteRawApi()
         {
             Console.WriteLine("InfluxdbCommandBase.Test1() :> creating influx db client ...");
 
@@ -47,34 +48,55 @@ namespace InfluxDBTestLib
                 Console.WriteLine("InfluxdbCommandBase.Test1() :> Write by POCO completed");
             }
 
-            Console.WriteLine("InfluxdbCommandBase.Test1() :> start querying ...");
-
-            // Query data
-            var query = $"from(bucket:\"defaultBucket\") |> range(start: -1h)";
-            var tables = await influxDBClient.GetQueryApi().QueryAsync(query, orgId);
-
-            tables.ForEach(fluxTable =>
-            {
-                var fluxRecords = fluxTable.Records;
-                fluxRecords.ForEach(fluxRecord =>
-                {
-                    Console.WriteLine($"{fluxRecord.GetTime()}: {fluxRecord.GetValue()}");
-                    Console.WriteLine($"    Field       : {fluxRecord.GetField()}");
-                    Console.WriteLine($"    Measurement : {fluxRecord.GetMeasurement()}");
-                });
-            });
-
-            Console.WriteLine("InfluxdbCommandBase.Test1() :> disposing influx db client ...");
             influxDBClient.Dispose();
         }
 
-        [Measurement("temperature")]
-        private class Temperature
+        public async Task ReadRawApi()
         {
-            [Column("location", IsTag = true)] public string Location { get; set; }
-            [Column("value")] public double Value { get; set; }
-            [Column("RLTestColumn")] public double RLTestColumn { get; set; }
-            [Column(IsTimestamp = true)] public DateTime Time;
+            try
+            {
+                Console.WriteLine("InfluxdbCommandBase.Test1() :> start querying ...");
+
+                var influxDBClient = InfluxDBClientFactory.Create("http://localhost:9999", Token);
+                Console.WriteLine("InfluxdbCommandBase.ReadRawApi() :> client created");
+
+                string orgId = "defaultOrg";
+
+                // Query data
+                var queryApi = influxDBClient.GetQueryApi();
+                var query = $"from(bucket:\"defaultBucket\") |> range(start: 0)";
+                var tables = await queryApi.QueryAsync(query, orgId);
+                if(tables != null)
+                {
+                    Console.WriteLine("InfluxdbCommandBase.ReadRawApi() :> got tables");
+
+                    tables.ForEach(fluxTable =>
+                    {
+                        var fluxRecords = fluxTable.Records;
+                        fluxRecords.ForEach(fluxRecord =>
+                        {
+                            Console.WriteLine($"{fluxRecord.GetTime()}: {fluxRecord.GetValue()}");
+                            Console.WriteLine($"    Field       : {fluxRecord.GetField()}");
+                            Console.WriteLine($"    Measurement : {fluxRecord.GetMeasurement()}");
+                        });
+                    });
+                }
+
+                influxDBClient.Dispose();
+                Console.WriteLine("InfluxdbCommandBase.ReadRawApi() :> Client disposed");
+            }catch(Exception ex)
+            {
+                Console.WriteLine($"Exception:\n{ex.Message}\n{ex.InnerException.Message}");
+            }
         }
+    }
+
+    [Measurement("temperature")]
+    class Temperature
+    {
+        [Column(IsTimestamp = true)] public DateTime Time;
+        [Column("location", IsTag = true)] public string Location { get; set; }
+        [Column("value")] public double Value { get; set; }
+        [Column] public double RLTestColumn { get; set; }
     }
 }
