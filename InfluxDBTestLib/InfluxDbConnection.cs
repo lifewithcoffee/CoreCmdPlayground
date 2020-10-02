@@ -1,4 +1,5 @@
 ﻿using InfluxDB.Client;
+using System;
 
 namespace InfluxDBTestLib
 {
@@ -8,7 +9,7 @@ namespace InfluxDBTestLib
         InfluxDBClient Client { get; }
     }
 
-    public class InfluxDbConnection : IInfluxDbConnection
+    public class InfluxDbConnection : IInfluxDbConnection, IDisposable
     {
         InfluxDBClient _influxDBClient;
 
@@ -21,12 +22,31 @@ namespace InfluxDBTestLib
 
         public void UpdateSetting(InfluxDbSetting setting)
         {
+            this.Dispose();
+
+            if(string.IsNullOrWhiteSpace(setting.Token))
+            {
+                _influxDBClient = InfluxDBClientFactory.Create(
+                    $"http://{setting.Host}:{setting.Port}"
+                    , setting.Username
+                    , setting.Password.ToCharArray()
+                    );
+            }
+            else
+            {
+                _influxDBClient = InfluxDBClientFactory.Create(
+                    $"http://{setting.Host}:{setting.Port}"
+                    , setting.Token.ToCharArray()
+                    );
+            }
+        }
+
+        public void Dispose()
+        {
             if (this.Client != null)
             {
                 this.Client.Dispose();
             }
-
-            _influxDBClient = InfluxDBClientFactory.Create($"http://{setting.Host}:{setting.Port}", setting.Token.ToCharArray());
         }
     }
 }
