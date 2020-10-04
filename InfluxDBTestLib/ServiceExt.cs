@@ -8,6 +8,7 @@ namespace InfluxDBTestLib
         {
             services.AddSingleton<IInfluxDbConnection>(x => new InfluxDbConnection(setting));
             services.AddTransient<IInfluxWriter, InfluxWriter>();
+            services.AddTransient<IInfluxReader, InfluxReader>();
         }
     }
 }
