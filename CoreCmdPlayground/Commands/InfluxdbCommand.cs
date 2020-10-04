@@ -35,8 +35,8 @@ namespace CoreCmdPlayground.Commands
         }
     }
 
-    [Alias("influx")]
-    public class InfluxdbCommand
+    //[Alias("influx")]
+    public class InfluxSdkCommand
     {
         // find tokens from InfluxDB UI | Data | Tokens
         private static readonly char[] Token = "4R1aL7t1hZolnMQezXQxkhhMGlqYUBy7g5Ue8RQAQ9wHn_XIHJN_2EpFqaYcD9F2wv_lt-kHqP8Ym99c7Gv5pw==".ToCharArray();
