@@ -6,6 +6,7 @@ using InfluxDB.Client.Writes;
 using InfluxDBTestLib;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,15 +18,6 @@ namespace CoreCmdPlayground.Commands
         [Column(IsTimestamp = true)] public DateTime Time;
         [Column("location", IsTag = true)] public string Location { get; set; }
         [Column("value")] public double Value { get; set; }
-        [Column] public double RLTestColumn { get; set; }
-        [Column] public double value2 { get; set; }
-        [Column] public double vAlue3 { get; set; }
-    }
-
-    [Measurement(nameof(humidity))]
-    class humidity
-    {
-         [Column] public double value { get; set; }
     }
 
     public class InfluxDiCommand
@@ -39,9 +31,7 @@ namespace CoreCmdPlayground.Commands
 
         public async Task Write()
         {
-            //await _writer.WriteAsync(new Temperature { Location = "UNSW", Value = 94D, RLTestColumn = 100D, value2 = 122D, vAlue3 = 112D, Time = DateTime.UtcNow });
-            await _writer.WriteAsync(new humidity { value = 100D });
-            Console.WriteLine("InfluxDi write: done");
+            await _writer.WriteAsync(new Temperature { Location = "UNSW", Value = 94D, Time = DateTime.UtcNow });
         }
     }
 
@@ -82,7 +72,7 @@ namespace CoreCmdPlayground.Commands
                 Console.WriteLine("InfluxdbCommandBase.Test1() :> Write by LineProtocol completed");
 
                 // Write by POCO
-                var temperature = new Temperature { Location = "south", Value = 94D, RLTestColumn = 100D, Time = DateTime.UtcNow };
+                var temperature = new Temperature { Location = "south", Value = 94D, Time = DateTime.UtcNow };
                 writeApi.WriteMeasurement(bucketName, orgId, WritePrecision.Ns, temperature);
                 Console.WriteLine("InfluxdbCommandBase.Test1() :> Write by POCO completed");
             }
@@ -117,6 +107,11 @@ namespace CoreCmdPlayground.Commands
                             Console.WriteLine($"{fluxRecord.GetTime()}: {fluxRecord.GetValue()}");
                             Console.WriteLine($"    Field       : {fluxRecord.GetField()}");
                             Console.WriteLine($"    Measurement : {fluxRecord.GetMeasurement()}");
+                            Console.WriteLine("------------------");
+                            Console.WriteLine(string.Join(",", fluxRecord.Values.Select(v => v.ToString())));
+                            Console.WriteLine("------------------");
+                            Console.WriteLine(fluxRecord.ToString());
+                            Console.WriteLine("==================\n");
                         });
                     });
                 }
