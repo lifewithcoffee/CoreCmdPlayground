@@ -15,33 +15,59 @@ namespace CoreCmdPlayground.Commands
     [Measurement("temperature")]
     class Temperature
     {
-        [Column(IsTimestamp = true)] public DateTime Time;
+        [Column(IsTimestamp = true)] public DateTime Time { get; set; }
         [Column("location", IsTag = true)] public string Location { get; set; }
         [Column("value")] public double Value { get; set; }
+        [Column] public double RLTestColumn { get; set; }
+
+        public override string ToString()
+        {
+            return new StringBuilder(GetType().Name + "[")
+                       .Append("time = " + Time.ToString("yyyy-MM-dd HH:mm:ss"))
+                       .Append(", location = " + Location)
+                       .Append(", value = " + Value)
+                       .Append(", RLTestColumn = " + RLTestColumn)
+                       .Append("]")
+                       .ToString();
+        }
     }
 
     public class InfluxDiCommand
     {
         IInfluxWriter _writer;
+        IInfluxReader _reader;
 
-        public InfluxDiCommand(IInfluxWriter writer)
+        public InfluxDiCommand(IInfluxWriter writer, IInfluxReader reader)
         {
             _writer = writer;
+            _reader = reader;
         }
 
         public async Task Write()
         {
-            await _writer.WriteAsync(new Temperature { Location = "UNSW", Value = 94D, Time = DateTime.UtcNow });
+            var random = new Random();
+            await _writer.WriteAsync(new Temperature { Location = "UNSW", Value = 94D, RLTestColumn = 123D, Time = DateTime.UtcNow });
+        }
+
+        public async Task Read()
+        {
+            var temperature = await _reader.QueryAsync<Temperature>(new QueryRange(-7, QueryRangeUnit.day));
+            temperature.ForEach(t =>
+            {
+                Console.WriteLine(t.ToString());
+            });
         }
     }
 
     //[Alias("influx")]
     public class InfluxSdkCommand
     {
-        // find tokens from InfluxDB UI | Data | Tokens
+        /**
+         * find tokens from InfluxDB UI | Data | Tokens
+         */
         private static readonly char[] Token = "4R1aL7t1hZolnMQezXQxkhhMGlqYUBy7g5Ue8RQAQ9wHn_XIHJN_2EpFqaYcD9F2wv_lt-kHqP8Ym99c7Gv5pw==".ToCharArray();
 
-        public void WriteRawApi()
+        public void Write()
         {
             Console.WriteLine("InfluxdbCommandBase.Test1() :> creating influx db client ...");
 
@@ -80,7 +106,7 @@ namespace CoreCmdPlayground.Commands
             influxDBClient.Dispose();
         }
 
-        public async Task ReadRawApi()
+        public async Task Read()
         {
             try
             {
@@ -108,7 +134,7 @@ namespace CoreCmdPlayground.Commands
                             Console.WriteLine($"    Field       : {fluxRecord.GetField()}");
                             Console.WriteLine($"    Measurement : {fluxRecord.GetMeasurement()}");
                             Console.WriteLine("------------------");
-                            Console.WriteLine(string.Join(",", fluxRecord.Values.Select(v => v.ToString())));
+                            Console.WriteLine(string.Join("\n", fluxRecord.Values.Select(v => v.ToString())));
                             Console.WriteLine("------------------");
                             Console.WriteLine(fluxRecord.ToString());
                             Console.WriteLine("==================\n");
