@@ -7,7 +7,7 @@ namespace InfluxDBTestLib
     public interface IInfluxWriter
     {
         void ChangeOrganizationBucket(string org, string bucket);
-        Task Write<TMeasurement>(TMeasurement measurement);
+        Task WriteAsync<TMeasurement>(TMeasurement measurement);
     }
 
     public class InfluxWriter : IInfluxWriter
@@ -28,7 +28,7 @@ namespace InfluxDBTestLib
             _bucket = bucket;
         }
 
-        public async Task Write<TMeasurement>(TMeasurement measurement)
+        public async Task WriteAsync<TMeasurement>(TMeasurement measurement)
         {
             await _writeApiAsync.WriteMeasurementAsync(_bucket, _org, WritePrecision.Ns, measurement);
         }
