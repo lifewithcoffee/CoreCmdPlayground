@@ -4,28 +4,20 @@ using System.Threading.Tasks;
 
 namespace InfluxDBTestLib
 {
-    public interface IInfluxWriter
+    public interface IInfluxWriter : IInfluxAccess
     {
-        void ChangeOrganizationBucket(string org, string bucket);
         Task WriteAsync<TMeasurement>(TMeasurement measurement);
     }
 
-    public class InfluxWriter : IInfluxWriter
+
+    public class InfluxWriter : InfluxAccess, IInfluxWriter
     {
         WriteApiAsync _writeApiAsync;
 
-        string _org = "defaultOrg";
-        string _bucket = "defaultBucket";
 
         public InfluxWriter(IInfluxDbConnection connection)
         {
             _writeApiAsync = connection.Client.GetWriteApiAsync();
-        }
-
-        public void ChangeOrganizationBucket(string org, string bucket)
-        {
-            _org = org;
-            _bucket = bucket;
         }
 
         public async Task WriteAsync<TMeasurement>(TMeasurement measurement)

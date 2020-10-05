@@ -4,55 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace InfluxDBTestLib
 {
-    public enum QueryRangeUnit
-    {
-        minute,
-        hour,
-        day,
-    }
-
-    public class QueryRange
-    {
-        int _number;
-        QueryRangeUnit _unit;
-
-        public QueryRange(int number, QueryRangeUnit unit)
-        {
-            _number = number;
-            _unit = unit;
-        }
-
-        public string ToFluxString()
-        {
-            switch (_unit)
-            {
-                case QueryRangeUnit.minute:
-                    return $"{_number}m";
-                case QueryRangeUnit.hour:
-                    return $"{_number}h";
-                case QueryRangeUnit.day:
-                    return $"{_number}d";
-            }
-            return "-1h"; // default return last 1 hour
-        }
-    }
-
-    public interface IInfluxReader
+    public interface IInfluxReader : IInfluxAccess
     {
         Task<List<TMeasurement>> QueryAsync<TMeasurement>(QueryRange range);
     }
 
-    public class InfluxReader : IInfluxReader
+    public class InfluxReader : InfluxAccess, IInfluxReader
     {
         QueryApi _queryApi;
-
-        string _org = "defaultOrg";
-        string _bucket = "defaultBucket";
 
         public InfluxReader(IInfluxDbConnection connection)
         {
