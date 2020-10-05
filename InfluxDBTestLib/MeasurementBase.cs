@@ -14,9 +14,9 @@ namespace InfluxDBTestLib
         /// <summary>
         /// Only properties with [Column] attributes will be added to the dictionary
         /// </summary>
-        protected Dictionary<string, object> GetDict()
+        protected SortedDictionary<string, object> GetDict()
         {
-            Dictionary<string, object> dict = new Dictionary<string, object>();
+            var dict = new SortedDictionary<string, object>();
 
             // add "_measurement" field
             dict.Add("_measurement", this.GetType().GetCustomAttribute<Measurement>().Name);
