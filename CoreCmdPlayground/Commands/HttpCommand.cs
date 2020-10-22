@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CoreCmdPlayground.Commands
 {
-    public class HttpCommand : HttpDownloadService
+    public class HttpCommand : HttpService
     {
         public HttpCommand(IHttpClientFactory httpClientFactory):base(httpClientFactory)
         { }
