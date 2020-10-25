@@ -51,6 +51,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoTDeviceLib", "IoTDeviceLib\IoTDeviceLib.csproj", "{B573BFD7-0004-471B-ABBF-9B7464F4D35C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansLib", "OrleansLib\OrleansLib.csproj", "{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{B573BFD7-0004-471B-ABBF-9B7464F4D35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B573BFD7-0004-471B-ABBF-9B7464F4D35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B573BFD7-0004-471B-ABBF-9B7464F4D35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{3038C36F-054F-4D99-B6DD-31DEDDCDED96} = {C4AF4B17-4E9A-4D40-924B-E6E21785B4DF}
 		{F4B19CA5-3444-4C67-884F-2591377DCE63} = {C4AF4B17-4E9A-4D40-924B-E6E21785B4DF}
 		{B573BFD7-0004-471B-ABBF-9B7464F4D35C} = {C4AF4B17-4E9A-4D40-924B-E6E21785B4DF}
+		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E} = {C4AF4B17-4E9A-4D40-924B-E6E21785B4DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {032760E8-99EC-43C8-9097-B67EF8BC954F}
