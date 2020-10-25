@@ -60,16 +60,8 @@ namespace HttpClientLib
             foreach (var repo in repositories)
             {
                 Console.WriteLine($"{repo.Name.PadLeft(maxNameLength)} : {repo.Watchers,-6} | {repo.LastPush, -22} | {repo.GitHubHomeUrl}");
-                //Console.WriteLine($"LastPush: {repo.LastPush}");
-                //Console.WriteLine(repo.Description);
-                //Console.WriteLine($"Address : {repo.GitHubHomeUrl}");
-                //Console.WriteLine(repo.Homepage);
-                //Console.WriteLine($"Stars   : {repo.Watchers}");
-                //Console.WriteLine("-----------------");
             }
 
-            //var msg = await stringTask;
-            //Console.WriteLine(msg);
             Console.WriteLine("\nNOTE: _httpClient was replaced in this demo, i.e. _httpClient was not created from a http client factory");
         }
     }
