@@ -18,6 +18,7 @@
     <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
     <ProjectReference Include="..\HttpClientLib\HttpClientLib.csproj" />
     <ProjectReference Include="..\LiteDBTestLib\LiteDBTestLib.csproj" />
+    <ProjectReference Include="..\OrleansLib\OrleansLib.csproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 

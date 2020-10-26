@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace CoreCmdPlayground.Commands
+namespace CoreCmdPlayground.Commands.Actor
 {
     public class Greet
     {
