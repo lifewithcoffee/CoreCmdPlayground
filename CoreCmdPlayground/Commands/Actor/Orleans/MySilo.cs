@@ -5,6 +5,7 @@ using OrleansLib;
 using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using System.Net;
 
 namespace CoreCmdPlayground.Commands.Actor.Orleans
 {
@@ -37,6 +38,7 @@ namespace CoreCmdPlayground.Commands.Actor.Orleans
                     options.ClusterId = "dev";
                     options.ServiceId = "MySilo";
                 })
+                //.Configure<EndpointOptions>(options => options.AdvertisedIPAddress = IPAddress.Loopback)
                 .ConfigureApplicationParts(parts => parts.AddApplicationPart(typeof(HelloGrain).Assembly).WithReferences())
                 .ConfigureLogging(logging => { 
                     logging.AddConsole();
