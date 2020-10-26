@@ -1,15 +1,15 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Orleans;
 
 namespace OrleansLib
 {
-    public interface IHello : Orleans.IGrainWithIntegerKey
+    public interface IHello : IGrainWithIntegerKey
     {
         Task<string> SayHello(string greeting);
     }
 
-    public class HelloGrain : Orleans.Grain, IHello
+    public class HelloGrain : Grain, IHello
     {
         Task<string> IHello.SayHello(string greeting)
         {
