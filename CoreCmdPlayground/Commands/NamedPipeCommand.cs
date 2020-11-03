@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CoreCmdPlayground.Commands
 {
-    class PipeCommand
+    class NamedPipeCommand
     {
         public void NamedServer()
         {
