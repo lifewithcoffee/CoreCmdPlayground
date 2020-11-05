@@ -2,7 +2,7 @@
 using Akka.Configuration;
 using System;
 
-namespace CoreCmdPlayground.Commands.Actor.AkkaNet
+namespace ActorPlayground.Commands.AkkaNet
 {
     class AkkaRemoteCommand
     { 

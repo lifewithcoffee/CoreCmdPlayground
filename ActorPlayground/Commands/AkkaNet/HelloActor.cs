@@ -1,7 +1,7 @@
 ﻿using Akka.Actor;
 using System;
 
-namespace CoreCmdPlayground.Commands.Actor.AkkaNet
+namespace ActorPlayground.Commands.AkkaNet
 {
     class HelloActor : ReceiveActor
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using System.Net;
 
-namespace CoreCmdPlayground.Commands.Actor.Orleans
+namespace ActorPlayground.Commands.Orleans
 {
     public class MySilo
     {

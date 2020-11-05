@@ -6,7 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace CoreCmdPlayground.Commands.Actor.Orleans
+namespace ActorPlayground.Commands.Orleans
 {
     public class MyClient
     {

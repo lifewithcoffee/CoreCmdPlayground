@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CoreCmdPlayground.Commands.Actor.AkkaNet
+namespace ActorPlayground.Commands.AkkaNet
 {
     public class Greet
     {

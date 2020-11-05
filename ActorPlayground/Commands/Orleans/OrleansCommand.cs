@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreCmdPlayground.Commands.Actor.Orleans
+namespace ActorPlayground.Commands.Orleans
 {
 
     class OrleansCommand

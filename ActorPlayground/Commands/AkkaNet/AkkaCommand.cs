@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace CoreCmdPlayground.Commands.Actor.AkkaNet
+namespace ActorPlayground.Commands.AkkaNet
 {
     class AkkaCommand
     {
