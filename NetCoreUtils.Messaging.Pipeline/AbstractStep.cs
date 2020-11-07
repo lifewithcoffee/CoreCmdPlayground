@@ -1,4 +1,4 @@
-﻿namespace CoreCmdPlayground.Commands.MessagePipeline
+﻿namespace NetCoreUtils.Messaging.Pipeline
 {
     abstract public class AbstractStep<T> : IStep<T>
     {

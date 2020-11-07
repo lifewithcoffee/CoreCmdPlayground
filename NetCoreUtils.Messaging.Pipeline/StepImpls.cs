@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CoreCmdPlayground.Commands.MessagePipeline
+namespace NetCoreUtils.Messaging.Pipeline
 {
+    public class Message1
+    {
+        public string Data { get; set; }
+    }
+
     public class Step1 : AbstractStep<Message1>
     {
         public override bool Handle(Message1 msg)

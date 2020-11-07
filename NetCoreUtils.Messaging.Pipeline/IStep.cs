@@ -1,4 +1,4 @@
-﻿namespace CoreCmdPlayground.Commands.MessagePipeline
+﻿namespace NetCoreUtils.Messaging.Pipeline
 {
     public interface IStep<T>
     {
@@ -9,5 +9,11 @@
     public interface IStep2<T>
     {
         bool Execute(T msg);
-    }    
+    }
+
+    //public interface IStep<TIn, TOut>
+    //{
+    //    bool Execute(TIn msg);
+    //    IStep
+    //}
 }

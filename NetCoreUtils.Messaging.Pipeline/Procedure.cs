@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CoreCmdPlayground.Commands.MessagePipeline
+namespace NetCoreUtils.Messaging.Pipeline
 {
-    class Procedure<T>
+    public class Procedure<T>
     {
         IStep<T> firstStep;
         IStep<T> lastStep;
@@ -28,7 +28,7 @@ namespace CoreCmdPlayground.Commands.MessagePipeline
         }
     }
 
-    class Procedure2<T>
+    public class Procedure2<T>
     {
         List<IStep2<T>> steps = new List<IStep2<T>>();
 

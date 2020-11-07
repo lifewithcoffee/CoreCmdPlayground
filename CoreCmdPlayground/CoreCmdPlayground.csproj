@@ -19,6 +19,7 @@
     <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
     <ProjectReference Include="..\HttpClientLib\HttpClientLib.csproj" />
     <ProjectReference Include="..\LiteDBTestLib\LiteDBTestLib.csproj" />
+    <ProjectReference Include="..\NetCoreUtils.Messaging.Pipeline\NetCoreUtils.Messaging.Pipeline.csproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 </Project>

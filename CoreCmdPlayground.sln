@@ -59,6 +59,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActorPlayground", "ActorPla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActorPlayground", "ActorPlayground\ActorPlayground.csproj", "{892B3732-DAAD-4402-9221-6DB7AECB4D44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreUtils.Messaging.Pipeline", "NetCoreUtils.Messaging.Pipeline\NetCoreUtils.Messaging.Pipeline.csproj", "{229D1794-6EBA-4800-9E03-802DE6291BF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{892B3732-DAAD-4402-9221-6DB7AECB4D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{892B3732-DAAD-4402-9221-6DB7AECB4D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{892B3732-DAAD-4402-9221-6DB7AECB4D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229D1794-6EBA-4800-9E03-802DE6291BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229D1794-6EBA-4800-9E03-802DE6291BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229D1794-6EBA-4800-9E03-802DE6291BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229D1794-6EBA-4800-9E03-802DE6291BF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

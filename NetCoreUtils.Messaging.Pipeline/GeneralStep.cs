@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CoreCmdPlayground.Commands.MessagePipeline
+namespace NetCoreUtils.Messaging.Pipeline
 {
     public class GeneralStep<T> : AbstractStep<T>
     {

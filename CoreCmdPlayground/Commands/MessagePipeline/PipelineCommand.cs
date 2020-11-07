@@ -2,14 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using NetCoreUtils.Messaging.Pipeline;
 
 namespace CoreCmdPlayground.Commands.MessagePipeline
 {
-    public class Message1
-    {
-        public string Data { get; set; }
-    }
-
     class PipelineCommand
     {
         public void Do()
