@@ -9,6 +9,7 @@
     <PackageReference Include="CoreCmd" Version="1.5.0.3" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.4" />
+    <PackageReference Include="refit" Version="5.2.1" />
   </ItemGroup>
 
   <ItemGroup>
