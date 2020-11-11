@@ -25,14 +25,13 @@ namespace CoreCmdPlayground.Commands
 
         public async Task DownloadImage(string url)
         {
-            byte[] imageBytes = await _httpClient.GetByteArrayAsync(url);
 
             //string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             //string localFilename = "favicon.ico";
             //string localPath = Path.Combine(documentsPath, localFilename);
 
-            string filename = Path.GetFileName(new Uri(url).LocalPath);
-            File.WriteAllBytes(@$"C:\_temp\{filename}", imageBytes);
+            _httpClientService.ResetHttpClient(_httpClient);
+            await _httpClientService.DownloadImageFile(url, @"C:\_temp");
         }
 
         public async Task GithubRepos(string orgName)   // e.g. dotnet, redwoodteq

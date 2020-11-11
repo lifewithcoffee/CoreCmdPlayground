@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq.Expressions;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -11,8 +12,10 @@ namespace HttpClientLib
 {
     public interface IHttpClientService
     {
+        void ResetHttpClient(HttpClient httpClient);
         void ResetHttpClient(Action<HttpClientOptions> setOption);
         Task<List<T>> GetStringAsync<T>(string url);
+        Task DownloadImageFile(string url, string targetDir);
     }
 
     class HttpClientService : IHttpClientService
@@ -49,6 +52,14 @@ namespace HttpClientLib
         {
             var stringTask = _httpClient.GetStringAsync(url);
             return JsonSerializer.Deserialize<List<T>>(await stringTask);
+        }
+
+        public async Task DownloadImageFile(string url, string targetDir)
+        {
+            byte[] imageBytes = await _httpClient.GetByteArrayAsync(url);
+            string originalFilename = Path.GetFileName(new Uri(url).LocalPath);
+            string fullPath = Path.GetFullPath($"{targetDir}\\{originalFilename}");
+            File.WriteAllBytes(fullPath, imageBytes);
         }
     }
 }
