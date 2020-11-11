@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using CoreCmd.CommandExecution;
 using CoreCmdPlayground.Commands.MediatR;
-using HttpClientLib;
 
 namespace CoreCmdPlayground
 {
@@ -11,7 +10,6 @@ namespace CoreCmdPlayground
         static async Task Main(string[] args)
         {
             await new AssemblyCommandExecutor().ExecuteAsync(args, services => {
-                services.AddHttpServices();
                 services.AddMediatRDemo();
 
                 /**
