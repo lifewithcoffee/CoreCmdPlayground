@@ -10,6 +10,7 @@ namespace HttpClientLib
         static public void AddHttpServices(this IServiceCollection services)
         {
             services.AddHttpClient();
+            services.AddTransient<IHttpClientService, HttpClientService>();
         }
     }
 }

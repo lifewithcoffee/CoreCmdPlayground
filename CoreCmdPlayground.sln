@@ -61,6 +61,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActorPlayground", "ActorPla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCmdPlayground.Rest", "CoreCmdPlayground.Rest\CoreCmdPlayground.Rest.csproj", "{CC624966-F8AF-4367-BC5A-62617FBF121B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalProjects", "ExternalProjects", "{B76F3FF0-DD5A-4316-93AC-497A4870EB49}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreUtils", "..\NetCoreUtils\NetCoreUtils\NetCoreUtils.csproj", "{75D04FF8-8537-4E59-82DB-11FF97717F4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +123,10 @@ Global
 		{CC624966-F8AF-4367-BC5A-62617FBF121B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC624966-F8AF-4367-BC5A-62617FBF121B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC624966-F8AF-4367-BC5A-62617FBF121B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D04FF8-8537-4E59-82DB-11FF97717F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D04FF8-8537-4E59-82DB-11FF97717F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D04FF8-8537-4E59-82DB-11FF97717F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D04FF8-8537-4E59-82DB-11FF97717F4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -133,6 +141,7 @@ Global
 		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E} = {3281A22D-9DF5-472D-9EB3-EE398EAADE77}
 		{C4C9739D-3462-441F-B00C-80DFE4185611} = {C4AF4B17-4E9A-4D40-924B-E6E21785B4DF}
 		{892B3732-DAAD-4402-9221-6DB7AECB4D44} = {3281A22D-9DF5-472D-9EB3-EE398EAADE77}
+		{75D04FF8-8537-4E59-82DB-11FF97717F4B} = {B76F3FF0-DD5A-4316-93AC-497A4870EB49}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {032760E8-99EC-43C8-9097-B67EF8BC954F}

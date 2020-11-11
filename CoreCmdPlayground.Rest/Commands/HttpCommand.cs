@@ -1,6 +1,7 @@
 ﻿using HttpClientLib;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -14,10 +15,12 @@ namespace CoreCmdPlayground.Commands
     public class HttpCommand
     {
         private HttpClient _httpClient;
+        private IHttpClientService _httpClientService;
 
-        public HttpCommand(IHttpClientFactory httpClientFactory)
+        public HttpCommand(IHttpClientFactory httpClientFactory, IHttpClientService httpClientService)
         {
             _httpClient = httpClientFactory.CreateClient();
+            _httpClientService = httpClientService;
         }
 
         public async Task DownloadImage(string url)
@@ -34,16 +37,14 @@ namespace CoreCmdPlayground.Commands
 
         public async Task GithubRepos(string orgName)   // e.g. dotnet, redwoodteq
         {
-            HttpClientHandler clientHandler = new HttpClientHandler { ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true };   // bypass the certificate
-            _httpClient = new HttpClient(clientHandler);
+            _httpClientService.ResetHttpClient(
+                o => {
+                    o.ByPassCertificate = true;
+                    o.MimeType = "application/vnd.github.v3+json";
+                }
+            );
 
-            _httpClient.DefaultRequestHeaders.Accept.Clear();
-            _httpClient.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
-            _httpClient.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
-
-            var stringTask = _httpClient.GetStringAsync($"https://api.github.com/orgs/{orgName}/repos");
-            var repositories = JsonSerializer.Deserialize<List<Repository>>(await stringTask);
+            List<Repository> repositories = await _httpClientService.GetStringAsync<Repository>($"https://api.github.com/orgs/{orgName}/repos");
 
             /** Alternative approach:
              * var streamTask = _httpClient.GetStreamAsync($"https://api.github.com/orgs/{orgName}/repos");
@@ -64,6 +65,7 @@ namespace CoreCmdPlayground.Commands
             }
 
             Console.WriteLine("\nNOTE: _httpClient was replaced in this demo, i.e. _httpClient was not created from a http client factory");
+            Console.WriteLine($"Console width: {Console.WindowWidth}");
         }
     }
 }
