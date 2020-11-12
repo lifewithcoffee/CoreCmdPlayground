@@ -1,4 +1,5 @@
-﻿using CoreCmdPlayground.Http.Models;
+﻿using CoreCmd.Attributes;
+using CoreCmdPlayground.Http.Models;
 using HttpClientLib;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,13 @@ using System.Threading.Tasks;
 
 namespace CoreCmdPlayground.Http.Commands
 {
-    public class HttpCommand
+    [Alias("http")]
+    public class HttpClientCommand
     {
         private HttpClient _httpClient;
         private IHttpClientService _httpClientService;
 
-        public HttpCommand(IHttpClientFactory httpClientFactory, IHttpClientService httpClientService)
+        public HttpClientCommand(IHttpClientFactory httpClientFactory, IHttpClientService httpClientService)
         {
             _httpClient = httpClientFactory.CreateClient();
             _httpClientService = httpClientService;
