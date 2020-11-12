@@ -45,7 +45,8 @@ namespace HttpClientLib
             _httpClient = new HttpClient(clientHandler);
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(options.MimeType));
-            _httpClient.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
+            if(options.ForGithub)
+                _httpClient.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
         }
 
         public async Task<List<T>> GetStringAsync<T>(string url)
