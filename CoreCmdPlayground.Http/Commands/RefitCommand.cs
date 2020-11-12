@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreCmdPlayground.Rest.Commands
+namespace CoreCmdPlayground.Http.Commands
 {
     class RefitCommand
     {

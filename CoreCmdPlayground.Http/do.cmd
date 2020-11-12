@@ -4,7 +4,7 @@
 
 :: =========================================================================
 SET DEBUG_PATH=%CD%\bin\Debug\netcoreapp3.1
-dotnet %DEBUG_PATH%\corecmdplayground.rest.dll %*
+dotnet %DEBUG_PATH%\corecmdplayground.http.dll %*
 
 :: =========================================================================
 :: or set the debug path to system path, then use the following statement to

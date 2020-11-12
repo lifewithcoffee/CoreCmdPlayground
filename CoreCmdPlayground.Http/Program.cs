@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using CoreCmd.CommandExecution;
 using HttpClientLib;
 
-namespace CoreCmdPlayground.Rest
+namespace CoreCmdPlayground.Http
 {
     class Program
     {
