@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Text.Json.Serialization;
 
-namespace HttpClientLib
+namespace CoreCmdPlayground.Http.Models
 {
     public class Repository
     {

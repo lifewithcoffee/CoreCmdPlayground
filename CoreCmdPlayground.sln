@@ -59,8 +59,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActorPlayground", "ActorPla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActorPlayground", "ActorPlayground\ActorPlayground.csproj", "{892B3732-DAAD-4402-9221-6DB7AECB4D44}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCmdPlayground.Rest", "CoreCmdPlayground.Rest\CoreCmdPlayground.Rest.csproj", "{CC624966-F8AF-4367-BC5A-62617FBF121B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalProjects", "ExternalProjects", "{B76F3FF0-DD5A-4316-93AC-497A4870EB49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreUtils", "..\NetCoreUtils\NetCoreUtils\NetCoreUtils.csproj", "{75D04FF8-8537-4E59-82DB-11FF97717F4B}"
@@ -121,10 +119,6 @@ Global
 		{892B3732-DAAD-4402-9221-6DB7AECB4D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{892B3732-DAAD-4402-9221-6DB7AECB4D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{892B3732-DAAD-4402-9221-6DB7AECB4D44}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC624966-F8AF-4367-BC5A-62617FBF121B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC624966-F8AF-4367-BC5A-62617FBF121B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC624966-F8AF-4367-BC5A-62617FBF121B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC624966-F8AF-4367-BC5A-62617FBF121B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75D04FF8-8537-4E59-82DB-11FF97717F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75D04FF8-8537-4E59-82DB-11FF97717F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75D04FF8-8537-4E59-82DB-11FF97717F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
