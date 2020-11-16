@@ -5,14 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CoreCmdPlayground.Commands
+namespace CoreCmdPlayground.Scaffold.Commands
 {
     [Help("Project scaffolding")]
     class ScafCommand
     {
 
-        // try out Handlebars.Net
-        public void TestHandlebars()
+        [Help("Test Handlebars.Net")]
+        public void Hbar()
         {
             string source =
 @"<div class=""entry"">
