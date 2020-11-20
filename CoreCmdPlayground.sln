@@ -69,7 +69,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCmd", "..\CoreCmd\CoreC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCmdPlayground.Scaffold", "CoreCmdPlayground.Scaffold\CoreCmdPlayground.Scaffold.csproj", "{4C2A5CD2-7D62-478E-B596-08367EC1C255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCmdPlayground.CefSharp", "CoreCmdPlayground.CefSharp\CoreCmdPlayground.CefSharp.csproj", "{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCmdPlayground.CefSharp", "CoreCmdPlayground.CefSharp\CoreCmdPlayground.CefSharp.csproj", "{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,12 +207,12 @@ Global
 		{4C2A5CD2-7D62-478E-B596-08367EC1C255}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4C2A5CD2-7D62-478E-B596-08367EC1C255}.Release|x64.ActiveCfg = Release|Any CPU
 		{4C2A5CD2-7D62-478E-B596-08367EC1C255}.Release|x64.Build.0 = Release|Any CPU
-		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Debug|Any CPU.Build.0 = Debug|x64
 		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Debug|x64.ActiveCfg = Debug|x64
 		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Debug|x64.Build.0 = Debug|x64
-		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Release|Any CPU.ActiveCfg = Release|x64
+		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Release|Any CPU.Build.0 = Release|x64
 		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Release|x64.ActiveCfg = Release|x64
 		{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
