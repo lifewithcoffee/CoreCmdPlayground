@@ -92,9 +92,10 @@ namespace CefSharp.MinimalExample.OffScreen
                 scriptTask.ContinueWith(t =>
                 {
                     //Give the browser a little time to render
-                    Thread.Sleep(500);
+                    Thread.Sleep(5000);
 
-                    browser.GetSourceAsync().ContinueWith(s => {
+                    browser.GetSourceAsync().ContinueWith(s =>
+                    {
                         string src = s.Result;
                         Console.WriteLine(src);
                         File.WriteAllText(@"C:\_temp\cef.txt", src);
