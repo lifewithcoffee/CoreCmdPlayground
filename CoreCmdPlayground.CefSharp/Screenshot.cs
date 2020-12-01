@@ -97,8 +97,17 @@ namespace CefSharp.MinimalExample.OffScreen
                     browser.GetSourceAsync().ContinueWith(s =>
                     {
                         string src = s.Result;
-                        Console.WriteLine(src);
-                        File.WriteAllText(@"C:\_temp\cef.txt", src);
+                        //Console.WriteLine(src);
+
+                        string srcFilePath = @"C:\_temp\cef.txt";
+                        File.WriteAllText(srcFilePath, src);
+                        Console.WriteLine($"Source saved to {srcFilePath}");
+
+                        Process.Start(new ProcessStartInfo(srcFilePath)
+                        {
+                            UseShellExecute = true      // UseShellExecute is false by default on .NET Core.
+                        });
+
                     });
 
                     // Wait for the screenshot to be taken.
