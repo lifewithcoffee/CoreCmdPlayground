@@ -71,9 +71,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCmdPlayground.Scaffold"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCmdPlayground.CefSharp", "CoreCmdPlayground.CefSharp\CoreCmdPlayground.CefSharp.csproj", "{532D130A-7025-4D7D-AC55-B4AA7CEE05FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCmdPlayground.LuceneNet4", "CoreCmdPlayground.LuceneNet4\CoreCmdPlayground.LuceneNet4.csproj", "{4756E271-0603-4312-9C43-579D9B5109E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCmdPlayground.LuceneNet4", "CoreCmdPlayground.LuceneNet4\CoreCmdPlayground.LuceneNet4.csproj", "{4756E271-0603-4312-9C43-579D9B5109E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCmdPlayground.LuceneNet3", "CoreCmdPlayground.LuceneNet3\CoreCmdPlayground.LuceneNet3.csproj", "{076DBC6A-90B5-47E7-9F80-99576C81DA9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LuceneNet", "LuceneNet", "{9651DBFB-0E06-474F-AA00-A8F9EAA7B217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -251,6 +253,8 @@ Global
 		{892B3732-DAAD-4402-9221-6DB7AECB4D44} = {3281A22D-9DF5-472D-9EB3-EE398EAADE77}
 		{75D04FF8-8537-4E59-82DB-11FF97717F4B} = {B76F3FF0-DD5A-4316-93AC-497A4870EB49}
 		{F8C1C614-03D3-4F6E-8AE3-B4E57F19A818} = {B76F3FF0-DD5A-4316-93AC-497A4870EB49}
+		{4756E271-0603-4312-9C43-579D9B5109E1} = {9651DBFB-0E06-474F-AA00-A8F9EAA7B217}
+		{076DBC6A-90B5-47E7-9F80-99576C81DA9C} = {9651DBFB-0E06-474F-AA00-A8F9EAA7B217}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {032760E8-99EC-43C8-9097-B67EF8BC954F}
