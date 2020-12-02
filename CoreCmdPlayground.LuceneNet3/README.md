@@ -1,4 +1,4 @@
-# CoreCmdPlayground.LuceneNet
+# CoreCmdPlayground.LuceneNet3
 
 ## Overview
 
@@ -6,6 +6,6 @@
   Reason: both lucene packages are for .net framework.
 - Dependent lucene packages:
   - Lucene.Net
-  - Lucene.Net.Contrib
+  - Lucene.Net.Contrib (for Chinese)
 - Snippets are copied from SharpCrawler
 - Entry method ArticleLinkIndexer.CreateIndex() was commentted out
