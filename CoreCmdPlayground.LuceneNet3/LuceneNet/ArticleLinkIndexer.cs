@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreCmdPlayground.LuceneNet.LuceneNet
+namespace CoreCmdPlayground.LuceneNet3.LuceneNet
 {
     public interface IArticleLinkIndexer
     {

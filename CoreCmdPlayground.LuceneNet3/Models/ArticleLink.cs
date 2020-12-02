@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreCmdPlayground.LuceneNet.Models
+namespace CoreCmdPlayground.LuceneNet3.Models
 {
     public class ArticleLink
     {

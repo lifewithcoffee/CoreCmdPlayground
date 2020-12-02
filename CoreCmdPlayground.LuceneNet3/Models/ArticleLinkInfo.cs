@@ -1,4 +1,4 @@
-﻿namespace CoreCmdPlayground.LuceneNet.Models
+﻿namespace CoreCmdPlayground.LuceneNet3.Models
 {
     public class ArticleLinkInfo
     {

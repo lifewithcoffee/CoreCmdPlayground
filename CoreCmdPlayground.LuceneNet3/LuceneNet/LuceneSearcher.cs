@@ -11,9 +11,9 @@ using Lucene.Net.Analysis.Cn;
 using static Lucene.Net.Search.SimpleFacetedSearch;
 using Lucene.Net.Search;
 using Lucene.Net.QueryParsers;
-using CoreCmdPlayground.LuceneNet.Models;
+using CoreCmdPlayground.LuceneNet3.Models;
 
-namespace CoreCmdPlayground.LuceneNet.LuceneNet
+namespace CoreCmdPlayground.LuceneNet3.LuceneNet
 {
     public interface ILuceneSearcher
     {
