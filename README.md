@@ -1,12 +1,10 @@
 # About CoreCmdPlayground
 
-This solution can be used as an incubator of CoreCmd applications.
+This project contains experiments for:
 
-- Loation of internal notes:
-
-  ```mcnref
-  [2019_06_30__00_41_21] ~ about project: CoreCmdPlayground:
-  "E:\rp\hg\mcn\sync\notes. startup''. pi''\my proj\notes. corecmd .mcn"
-  ```
-
-- CoreCmdPlayground depends on other 3 projects
+- scaffolding
+- command loading test scenarios of:
+  - loading commands from a c# console/library dll
+  - loading commands from a f# console/library dll
+    > relevant issue: [2019_05_14__15_00_39] error when target command call an external f# dll's method
+- F# language experiment
