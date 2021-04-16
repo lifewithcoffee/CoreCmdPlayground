@@ -3,7 +3,7 @@
 ::dotnet run %*
 
 :: =========================================================================
-SET DEBUG_PATH=%CD%\bin\Debug\netcoreapp3.1
+SET DEBUG_PATH=%CD%\bin\Debug\net5.0
 dotnet %DEBUG_PATH%\corecmdplayground.dll %*
 
 :: =========================================================================
