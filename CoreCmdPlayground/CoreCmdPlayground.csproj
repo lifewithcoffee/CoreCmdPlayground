@@ -2,11 +2,10 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CoreCmd" Version="1.6.0" />
     <PackageReference Include="mediatr" Version="5.1.0" />
     <PackageReference Include="mediatr.extensions.microsoft.dependencyinjection" Version="5.1.0" />
     <PackageReference Include="fluentvalidation.aspnetcore" Version="8.0.100" />
@@ -17,6 +16,7 @@
     <ProjectReference Include="..\FsharpConsoleApp\FsharpConsoleApp.fsproj" />
     <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
     <ProjectReference Include="..\LiteDBTestLib\LiteDBTestLib.csproj" />
+    <ProjectReference Include="..\SubModules\CoreCmd\CoreCmd\CoreCmd.csproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 </Project>
