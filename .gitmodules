@@ -1,0 +1,6 @@
+[submodule "SubModules/CoreCmd"]
+	path = SubModules/CoreCmd
+	url = https://github.com/lifewithcoffee/CoreCmd.git
+[submodule "SubModules/NetCoreUtils"]
+	path = SubModules/NetCoreUtils
+	url = https://github.com/lifewithcoffee/NetCoreUtils.git
