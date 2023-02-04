@@ -88,8 +88,16 @@ namespace CefSharp.MinimalExample.OffScreen
 
                     });
 
+                    // Get full page viewport size
+                    var contentSize = browser.GetContentSizeAsync().Result;
+                    var fullPageViewPort = new DevTools.Page.Viewport
+                    {
+                        Width = contentSize.Width,
+                        Height = contentSize.Height,
+                    };
+
                     // Wait for the screenshot to be taken.
-                    var task = browser.CaptureScreenshotAsync();
+                    var task = browser.CaptureScreenshotAsync(null, null, fullPageViewPort);
                     task.ContinueWith(x =>
                     {
                         // Make a file to save it to (e.g. C:\Users\jan\Desktop\CefSharp screenshot.png)
