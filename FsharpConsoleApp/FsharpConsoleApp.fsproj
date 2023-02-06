@@ -21,13 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="corecmd" Version="1.2.0" />
-    <PackageReference Include="FSharp.Core" Version="4.5.0" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FsharpLib\FsharpLib.fsproj" />
+    <ProjectReference Include="..\SubModules\CoreCmd\CoreCmd\CoreCmd.csproj" />
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 
