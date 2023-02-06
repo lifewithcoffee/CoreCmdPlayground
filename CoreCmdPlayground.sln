@@ -28,26 +28,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteDBTestLib", "LiteDBTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientLib", "HttpClientLib\HttpClientLib.csproj", "{F4B19CA5-3444-4C67-884F-2591377DCE63}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docker-compose", "docker-compose\", "{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_1518"
-		Debug.AspNetCompiler.PhysicalPath = "docker-compose\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1518\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_1518"
-		Release.AspNetCompiler.PhysicalPath = "docker-compose\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1518\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "1518"
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrleansLib", "OrleansLib\OrleansLib.csproj", "{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RxLib", "RxLib\RxLib.csproj", "{C4C9739D-3462-441F-B00C-80DFE4185611}"
@@ -75,6 +55,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreUtils", "SubModules\NetCoreUtils\NetCoreUtils\NetCoreUtils.csproj", "{76D08099-BCAF-4B32-87FC-4D63266D6F23}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FSharp", "FSharp", "{E615474D-3D3F-4A35-B1F3-E1EBEB8669E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docker-compose-configs", "docker-compose-configs\docker-compose-configs.csproj", "{16082CD9-B730-435D-A0B7-98C28BC17B39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -140,14 +122,6 @@ Global
 		{F4B19CA5-3444-4C67-884F-2591377DCE63}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F4B19CA5-3444-4C67-884F-2591377DCE63}.Release|x64.ActiveCfg = Release|Any CPU
 		{F4B19CA5-3444-4C67-884F-2591377DCE63}.Release|x64.Build.0 = Release|Any CPU
-		{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}.Debug|x64.Build.0 = Debug|Any CPU
-		{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}.Release|x64.ActiveCfg = Debug|Any CPU
-		{0056762E-DF9A-4AD0-8B3E-397CE17E8FFE}.Release|x64.Build.0 = Debug|Any CPU
 		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C8A8434-FF7B-496F-B854-5CA624B7BF3E}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -228,6 +202,14 @@ Global
 		{76D08099-BCAF-4B32-87FC-4D63266D6F23}.Release|Any CPU.Build.0 = Release|Any CPU
 		{76D08099-BCAF-4B32-87FC-4D63266D6F23}.Release|x64.ActiveCfg = Release|Any CPU
 		{76D08099-BCAF-4B32-87FC-4D63266D6F23}.Release|x64.Build.0 = Release|Any CPU
+		{16082CD9-B730-435D-A0B7-98C28BC17B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16082CD9-B730-435D-A0B7-98C28BC17B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16082CD9-B730-435D-A0B7-98C28BC17B39}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{16082CD9-B730-435D-A0B7-98C28BC17B39}.Debug|x64.Build.0 = Debug|Any CPU
+		{16082CD9-B730-435D-A0B7-98C28BC17B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16082CD9-B730-435D-A0B7-98C28BC17B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16082CD9-B730-435D-A0B7-98C28BC17B39}.Release|x64.ActiveCfg = Release|Any CPU
+		{16082CD9-B730-435D-A0B7-98C28BC17B39}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
