@@ -23,11 +23,11 @@ namespace CoreCmdPlayground.Commands.MediatR.PipelineBehaviors
             _validators = validators;
         }
 
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             Console.WriteLine("RequestValidationBehavior.Handle() called");
 
-           var context = new ValidationContext(request);
+           var context = new ValidationContext<TRequest>(request);
 
             var failures = _validators
                 .Select(v => v.Validate(context))

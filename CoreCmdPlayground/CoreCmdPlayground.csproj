@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="mediatr" Version="5.1.0" />
-    <PackageReference Include="mediatr.extensions.microsoft.dependencyinjection" Version="5.1.0" />
-    <PackageReference Include="fluentvalidation.aspnetcore" Version="8.0.100" />
+    <PackageReference Include="mediatr" Version="11.1.0" />
+    <PackageReference Include="mediatr.extensions.microsoft.dependencyinjection" Version="11.0.0" />
+    <PackageReference Include="fluentvalidation.aspnetcore" Version="11.2.2" />
   </ItemGroup>
 
   <ItemGroup>

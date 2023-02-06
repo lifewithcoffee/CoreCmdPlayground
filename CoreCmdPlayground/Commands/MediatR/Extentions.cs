@@ -5,6 +5,7 @@ using MediatR.Pipeline;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace CoreCmdPlayground.Commands.MediatR
@@ -13,7 +14,7 @@ namespace CoreCmdPlayground.Commands.MediatR
     {
         static public void AddMediatRDemo(this IServiceCollection services)
         {
-            services.AddMediatR();
+            services.AddMediatR(Assembly.GetExecutingAssembly());
 
             /** [MCN] IPipelineBehavior<> will be invoked by their registration order
              * 

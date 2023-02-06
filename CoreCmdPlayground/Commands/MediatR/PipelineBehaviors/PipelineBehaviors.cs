@@ -7,9 +7,9 @@ using Microsoft.Extensions.Logging;
 
 namespace CoreCmdPlayground.Commands.MediatR.PipelineBehaviors
 {
-    public class LoggingBehavior2<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> 
+    public class LoggingBehavior2<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             Console.WriteLine("LoggingBehavior2 --- start");
             var response = await next();
@@ -18,9 +18,9 @@ namespace CoreCmdPlayground.Commands.MediatR.PipelineBehaviors
         }
     }
 
-    public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> 
+    public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             Console.WriteLine("LoggingBehavior ... begin");
             var response = await next();
@@ -31,7 +31,7 @@ namespace CoreCmdPlayground.Commands.MediatR.PipelineBehaviors
 
     public class PingPipelineBehavior : IPipelineBehavior<Ping, string>
     {
-        public async Task<string> Handle(Ping request, CancellationToken cancellationToken, RequestHandlerDelegate<string> next)
+        public async Task<string> Handle(Ping request, RequestHandlerDelegate<string> next, CancellationToken cancellationToken)
         {
             Console.WriteLine($">>> Start to handle {typeof(PingPipelineBehavior).Name}");
             var response = await next();
